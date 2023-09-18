@@ -5,7 +5,7 @@ close all
 clear all
 
 % Import the data file
-filename = "Standard_Setup\CH1_I_mA_CH2_V_10x_500MSs_200K_32AVG_Water_Tv001"; % path to file
+filename = "E:\Dropbox (GaTech)\Georgia Tech\Research\Experiments\350 kHz Design and Experiments\Transducer Validation\Standard_Setup\CH1_I_mA_CH2_V_10x_500MSs_200K_32AVG_Water_Tv001_Ematched4"; % path to file
 data = importdata(filename);
 
 %% Declare variables and constants
@@ -97,6 +97,7 @@ figure(5)
 plot(fvecp/1e6, abs(R),'-','DisplayName',"S11: M2 ",'LineWidth',1.5);
 hold on
 ylim([0 1])
+legend('v1','v2')
 set(findall(gcf,'-property','FontSize'),'FontSize',17)
 set(findall(gcf,'-property','FontName'),'FontName','Times New Roman')
 xlabel('Frequency [MHz]')
